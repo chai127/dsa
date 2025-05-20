@@ -1,8 +1,10 @@
 # Byte-compiled / cache files
 __pycache__/
+# * = anything , [] is .pyo, .pyc , .pyd
 *.py[cod]
 
 # VSCode settings
+#some folders that do start with . are usually hidden
 .vscode/
 
 # OS files
@@ -32,4 +34,5 @@ Makefile
 
 # Backup / temporary files
 *~
+#apparently this is for vim
 *.swp
