@@ -1,0 +1,35 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# C++ build files
+*.o
+*.out
+*.exe
+*.obj
+*.gch
+*.pch
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Binary and debug files
+*.log
+*.bin
+*.dll
+*.so
+*.a
+
+# Backup / temporary files
+*~
+*.swp
