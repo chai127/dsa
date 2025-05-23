@@ -91,3 +91,8 @@ empRef2.displayDetails();
 
     return 0;
 }
+
+
+// // Virtual functions cannot be static.
+// Virtual functions should be accessed using a pointer or reference of base class type to achieve runtime polymorphism.
+// A class may have a virtual destructor, but it cannot have a virtual constructor.
