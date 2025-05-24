@@ -6,7 +6,7 @@
 Classes are a user-defined data type.  
 They consist of **data members** (variables) and **member functions** (methods) that operate on those data members.
 
----
+
 
 ## Access Specifiers
 | Specifier   | Access Level                                                    |
@@ -16,7 +16,6 @@ They consist of **data members** (variables) and **member functions** (methods) 
 | `public`    | Accessible **from anywhere**, including by objects              |
 
 
----
 
 ## Objects
 An object is an **instance** of a class.  
@@ -28,25 +27,13 @@ It represents a concrete implementation of the class blueprint.
 Only essential information is shown to the user; implementation details are hidden.  
 **Example**: A car driver knows how to drive (interface), not how the engine works (implementation).
 
----
+
 
 ## Encapsulation
 Wrapping data and methods into a single unit (class) and **restricting access** to some components using access specifiers.  
 Helps enforce **data hiding**.
 
----
 
-## Copy Constructor 
-- **Copy Constructor**: A copy constructor is a special constructor used to create a new object as a copy of an existing object.
-```cpp
-ClassName(const ClassName& other);
-```
-- It’s called when:
-- You initialize a new object with an existing object, e.g., ClassName obj2 = obj1;
-- You pass an object by value to a function.
-- A function returns an object by value.
-
----
 
 ## Polymorphism
 "Many forms" – the ability of functions or objects to behave differently in different contexts.  
@@ -54,24 +41,7 @@ Includes:
 - **Compile-time polymorphism** (function overloading, operator overloading)
 - **Run-time polymorphism** (via `virtual` functions and inheritance)
 
----
 
-## Static Members
-- **Shared across all objects** of the class.
-- **Static data members** retain their value between instances.
-- **Static member functions**:
-  - Can only access static data members.
-  - Cannot access non-static (instance) members.
-  - Can be accessed using `ClassName::functionName()` (no object needed).
-
----
-
-## Friend
-- A `friend` allows another class or function to access its private and protected members.
-- **Not mutual** — if class A declares B as a friend, B can access A's members, but not the other way around.
-- Friendship breaks encapsulation but is sometimes necessary (e.g., operator overloading).
-
----
 
 ## Inheritance 
 - (Base class constructor is called before derived class constructor.)
@@ -85,22 +55,51 @@ Includes:
 
 ---
 
+## Copy Constructor 
+- **Copy Constructor**: A copy constructor is a special constructor used to create a new object as a copy of an existing object.
+```cpp
+ClassName(const ClassName& other);
+```
+- It’s called when:
+- You initialize a new object with an existing object, e.g., ClassName obj2 = obj1;
+- You pass an object by value to a function.
+- A function returns an object by value.
+
+
+
+## Static Members
+- **Shared across all objects** of the class.
+- **Static data members** retain their value between instances.
+- **Static member functions**:
+  - Can only access static data members.
+  - Cannot access non-static (instance) members.
+  - Can be accessed using `ClassName::functionName()` (no object needed).
+
+
+
+## Friend
+- A `friend` allows another class or function to access its private and protected members.
+- **Not mutual** — if class A declares B as a friend, B can access A's members, but not the other way around.
+- Friendship breaks encapsulation but is sometimes necessary (e.g., operator overloading).
+
+
+
 ## Virtual Destructors
 - When using inheritance and polymorphism, base classes should declare destructors as `virtual`.
 - Ensures derived class destructors are called properly during object destruction via base pointers.
+
+
+
+## Abstract Classes & Pure Virtual Functions
+- Abstract class contains at least one pure virtual function (`virtual void func() = 0;`).
+- Cannot instantiate abstract classes directly.
+- Used to define interfaces that derived classes must implement.
 
 ---
 
 ## Operator Overloading
 - Allows customizing behavior of operators (`+`, `=`, `<<`, etc.) for user-defined types.
 - Often used with friend functions to access private members.
-
----
-
-## Abstract Classes & Pure Virtual Functions
-- Abstract class contains at least one pure virtual function (`virtual void func() = 0;`).
-- Cannot instantiate abstract classes directly.
-- Used to define interfaces that derived classes must implement.
 
 ---
 
