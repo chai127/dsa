@@ -145,13 +145,13 @@ delete obj;                    // Destructor is called
 - This creates **ambiguity**, as the derived-most class ends up with **two copies** of the base class members.
 
 ### Problem Diagram:
-
+```
   A
  / \
 B   C
  \ /
   D
-
+```
 - Class `D` inherits from both `B` and `C`, which both inherit from `A`.
 - Without precautions, class `D` will have **two copies** of class `A`, causing ambiguity.
 
@@ -172,8 +172,10 @@ int main() {
     D obj;
     // obj.display();  // ❌ Error: Ambiguous – compiler doesn't know whether to call B::A::display or C::A::display
 }
+```
+- solved
+```cpp
 
-//solved
 class A {
 public:
     void display() { cout << "A"; }
