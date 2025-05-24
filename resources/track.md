@@ -3,9 +3,10 @@
 ## ✅ Currently Working On
 
 ### 🧱 Object-Oriented Programming (OOP)
-- [ ] OOP Basics in C++
+- [✅] OOP Basics in C++
+- [ ] OOP final project - library management system
 - [ ] Vectors in C++
-- [ ] Memory Management in C++
+- [ ] Memory Management in C++ + file handling
 - [ ] OOP Basics in Python
 
 ---
