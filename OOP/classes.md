@@ -191,3 +191,21 @@ int main() {
 }
 
 ```
+
+## Abstract Classes in C++
+- An **abstract class** is a class you **can’t create objects of directly**. It’s meant to serve as a base for other classes.
+
+### How to Make a Class Abstract
+
+You make a class abstract by adding at least one **pure virtual function** — a function with no implementation in the base class.
+
+```cpp
+class Shape {
+public:
+    virtual void draw() = 0;  // Pure virtual function
+};
+```
+The = 0 means “this function must be implemented by derived classes.
+
+---
+
