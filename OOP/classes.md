@@ -209,3 +209,30 @@ The = 0 means “this function must be implemented by derived classes.
 
 ---
 
+## Constructor Overloading
+- Allows multiple constructors with different parameter lists within the same class.
+- Enables creating objects in various ways to improve flexibility and usability.
+
+## Dynamic Memory Allocation
+- Uses `new` to allocate memory on the heap and `delete` to free it.
+- Requires careful management to prevent memory leaks and dangling pointers.
+
+## Rule of Three
+- Applies when a class manages resources manually (e.g., dynamic memory).
+- Consists of three special member functions:
+  1. **Destructor:** Releases allocated resources when an object is destroyed.
+  2. **Copy Constructor:** Creates a new object as a deep copy of an existing one.
+  3. **Copy Assignment Operator:** Assigns values from one object to another, properly managing existing resources.
+- Prevents problems caused by default shallow copying, such as double deletion or resource leaks.
+
+## Deep vs. Shallow Copy
+- **Shallow Copy:** Copies only pointer addresses, causing multiple objects to share the same resource.
+- **Deep Copy:** Copies the actual data, ensuring each object owns its independent resource.
+
+## Safe Memory Management Practices
+- Always pair `new` with `delete` to avoid memory leaks.
+- Handle self-assignment in the copy assignment operator to prevent undefined behavior.
+- Ensure proper cleanup of dynamically allocated resources in destructors.
+
+---
+
